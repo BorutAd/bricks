@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>The Bricks</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet"href="stil.css">
+	<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body onload="risi()"onload="risi2()">
+	<p id="opomba">
+		Press space to start
+	</p>
+<div id="gameOver">
+	<p id="poskusiZnova">
+		Game over!
+	</p>
+	<p id="koncneTocke">
+		You've reached  points!
+	</p>
+	<div id="gumbZnova"class="gumb"onclick="window.location.reload()";>
+		Retry
+	</div>
+</div>
+<div id="zmaga">
+	<p id="zmagalSi">
+		Congratulations, You've won!
+	</p>
+	<div id="gumbZnova"class="gumb"onclick="window.location.reload()";>
+		Play again
+	</div>
+	<p id="zmagovalneTocke">
+		You reached've  points!
+	</p>
+</div>
+<table id="glavni">
+<tr>
+	<td>
+		<p id="tockeText">Points: <mark id="tocke">0</mark></p>
+		<p id="timerText">Time: <mark id="cas">00:00</mark></p>
+	</td>
+</tr>
+<tr>
+	
+	<td width="900" height="700">	
+		<canvas id="canvas" width="900" height="700">
+
+		</canvas>
+	</td>
+	<td>
+		
+	</td>
+</tr>
+	<script src="skripta.js"></script>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<script>
+document.getElementById('canvas').style.cursor = 'none';
+function risi(){
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(350, 500, 10, 0, Math.PI*2, true);
+	ctx.fillStyle='green';
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+}
+
+
+</script>
+</body>
+</html>
